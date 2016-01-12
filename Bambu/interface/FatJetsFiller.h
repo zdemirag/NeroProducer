@@ -13,7 +13,7 @@ namespace mithep {
 
     class FatJetsFiller : public BaseFiller {
     public:
-      FatJetsFiller(BaseFiller::Collection col) : collection_(col), MVAOn(false) {}
+      FatJetsFiller(BaseFiller::Collection col) : collection_(col) {}
       ~FatJetsFiller() {}
 
       BareCollection* getObject() override { return &out_; }
@@ -31,8 +31,6 @@ namespace mithep {
       // must be corrected, loose-id jets
       void SetFatJetsName(char const* _name) { fatJetsName_ = _name; }
 
-      void SetMVAOn(bool b) { MVAOn = b; }
-
     private:
       BareFatJets out_{};
 
@@ -40,7 +38,6 @@ namespace mithep {
 
       TString fatJetsName_ = "AKt8PFJetsCHS";
       
-      bool MVAOn;
       NeuralNet *topANN;
       float nn_mSD;
       float nn_QGTag;

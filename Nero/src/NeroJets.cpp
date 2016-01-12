@@ -174,7 +174,7 @@ bool NeroJets::JetId(const pat::Jet &j, std::string id)
 
     //tightLepVetoJetID = (NHF<0.90 && NEMF<0.90 && NumConst>1 && MUF<0.8) && ((fabs(eta)<=2.4 && CHF>0 && CHM>0 && CEMF<0.90) || fabs(eta)>2.4) && fabs(eta)<=3.0 
 
-    if (id=="loose" || id=="monojet" || id=="monojetloose")
+    if (id=="loose")
     {
         //jetid = (NHF<0.99 && NEMF<0.99 && NumConst>1 && MUF<0.8) && ((fabs(j.eta())<=2.4 && CHF>0 && CHM>0 && CEMF<0.99) || fabs(j.eta())>2.4);
         jetid = (NHF<0.99 && NEMF<0.99 && NumConst>1) && ((fabs(eta)<=2.4 && CHF>0 && CHM>0 && CEMF<0.99) || fabs(eta)>2.4) && fabs(eta)<=3.0;
@@ -189,10 +189,10 @@ bool NeroJets::JetId(const pat::Jet &j, std::string id)
     }
 
     if (id=="monojet")
-        jetid = jetid && (CHF > 0.2 && NHF < 0.7 && NEMF < 0.7);
+        jetid = (CHF > 0.2 && NHF < 0.7 && NEMF < 0.7);
 
     if (id=="monojetloose")
-        jetid = jetid && (NHF < 0.7 && NEMF < 0.9);
+        jetid = (NHF < 0.7 && NEMF < 0.9);
 
     return jetid;
 }

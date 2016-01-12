@@ -25,8 +25,6 @@ namespace mithep {
         kPuppiJets,
         kAK8Jets,
         kCA15Jets,
-        kAK8PuppiJets,
-        kCA15PuppiJets,
         kLeptons,
         kMet,
         kMonteCarlo,
