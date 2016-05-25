@@ -140,6 +140,7 @@ int NeroPhotons::analyze(const edm::Event& iEvent,const edm::EventSetup &iSetup)
         //FILL
         TLorentzVector phoP4=TLorentzVector(pho.px(),pho.py(),pho.pz(),pho.energy());
 
+        /*
         float smear = 0.0, scale = 1.0;
         float aeta = std::abs(pho.eta());
         float et = pho.energy()/cosh(aeta);
@@ -160,6 +161,7 @@ int NeroPhotons::analyze(const edm::Event& iEvent,const edm::EventSetup &iSetup)
         
         }
         
+        */
 
         //
         new ( (*p4)[p4->GetEntriesFast()]) TLorentzVector(phoP4);
