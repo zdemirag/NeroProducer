@@ -11,7 +11,6 @@ wget https://github.com/jbrands/RecoJets-JetProducers/raw/3dad903ed25d025f68be94
 wget https://github.com/jbrands/RecoJets-JetProducers/raw/3dad903ed25d025f68be94d6f781ca957d6f86ac/pileupJetId_76x_Eta2p75to3_BDT.weights.xml.gz
 wget https://github.com/jbrands/RecoJets-JetProducers/raw/3dad903ed25d025f68be94d6f781ca957d6f86ac/pileupJetId_76x_Eta3to5_BDT.weights.xml.gz
 cd ../../..
-
 echo /CommonTools/PileupAlgos/ > .git/info/sparse-checkout
 echo /CommonTools/Utils/ >> .git/info/sparse-checkout
 echo /JetMETCorrections/Configuration/ >> .git/info/sparse-checkout
