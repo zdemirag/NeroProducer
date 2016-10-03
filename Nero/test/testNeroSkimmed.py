@@ -12,8 +12,8 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
 
 
 #fileList = [ "/store/mc/Spring14miniaod/WToTauNu_M_200_Tune4C_tauola_13TeV_pythia8/MINIAODSIM/PU20bx25_POSTLS170_V5-v1/00000/00100400-9007-E411-964D-0025905AC822.root",
-#	     "/store/mc/Spring14miniaod/WToTauNu_M_200_Tune4C_tauola_13TeV_pythia8/MINIAODSIM/PU20bx25_POSTLS170_V5-v1/00000/08194701-9007-E411-B181-0025905AC982.root",
-#	    ]
+#     "/store/mc/Spring14miniaod/WToTauNu_M_200_Tune4C_tauola_13TeV_pythia8/MINIAODSIM/PU20bx25_POSTLS170_V5-v1/00000/08194701-9007-E411-B181-0025905AC982.root",
+#    ]
 fileList = []
 
 
@@ -21,13 +21,13 @@ fileList = []
 ###FILELIST###
 
 process.source = cms.Source("PoolSource",
-    	fileNames = cms.untracked.vstring(fileList)
+                            fileNames = cms.untracked.vstring(fileList)
     )
 
 # ---- define the output file -------------------------------------------
 process.TFileService = cms.Service("TFileService",
-			closeFileFast = cms.untracked.bool(True),
-			fileName = cms.string("NeroNtuples.root"),
+                                   closeFileFast = cms.untracked.bool(True),
+                                   fileName = cms.string("NeroNtuples.root"),
                 )
 
 #process.load('NeroProducer.Nero.Nero_cfi')
