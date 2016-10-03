@@ -86,7 +86,7 @@ from CondCore.DBCommon.CondDBSetup_cfi import *
 
 ## SKIM INFO
 process.load('NeroProducer.Skim.infoProducerSequence_cff')
-process.load('NeroProducer.Nero.Nero_cfi_monojetZeynep')
+process.load('NeroProducer.Nero.Nero_Monojet_cfi')
 
 #-----------------------ELECTRON ID-------------------------------
 from NeroProducer.Nero.egammavid_cfi import *
